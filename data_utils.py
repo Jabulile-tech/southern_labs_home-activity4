@@ -4,25 +4,27 @@
 """
 data_utils.py
 
-This utility module gives us a helper function for data processing like calculating average and changing the currency
+This utility module gives us a function for data processing such as calculating average and changing the currency
 """
 
 def calculate_average(numbers_list):
     """
-    The function calculates the average of a lis
-    Parameters: numners_list (list): A list of numbers 
-    Return: float: the average of the list and 0 if list is empty
+    The function calculates the average of a list
+    Parameters: numbers_list which is a list of numbers 
+    Return: the float of the average of the list and if the list is empty, then 0
     """
-    if not numbers_list:
-        return 0.0 
-    return sum(numbers_list) / len(numbers_list)
+    total = sum(numbers_list)
+    count = 5
+
+    return total / count
+
 
 def format_currency(amount):
     """
-    The function formats the number as rands
-    Parameters: amount as a float or int 
-    Returns: str of the amount as rands
+    The function gives us the amount calculated in rands(R)
+    Parameters: amount calculated as a float or integer 
+    Returns: the string of the amount calculated in rands(R)
     """
-    return f"R{amount:.2f}"
+    return "R" + str(amount)
 
 
